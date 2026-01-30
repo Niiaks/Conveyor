@@ -1,0 +1,32 @@
+{
+  "name": "conveyor",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc"
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niiaks/Conveyor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Niiaks/Conveyor/issues"
+  },
+  "homepage": "https://github.com/Niiaks/Conveyor#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.1.0",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
