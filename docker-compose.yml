@@ -8,9 +8,20 @@ services:
     environment:
       - MINIO_ROOT_USER=minio-user
       - MINIO_ROOT_PASSWORD=minio-password
+      - MINIO_API_CORS_ALLOW_ORIGIN=*
     command: server /data --console-address ":9001"
     volumes:
       - minio_data:/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
 
 volumes:
   minio_data:
