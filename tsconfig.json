@@ -5,8 +5,13 @@
     "strict": true,
     "esModuleInterop": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./"
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts",
+    "workers/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

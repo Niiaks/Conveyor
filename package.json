@@ -4,7 +4,11 @@
   "description": "",
   "scripts": {
     "start": "nodemon src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test:stress": "k6 run tests/load/upload-stress.test.js",
+    "test:stress:custom": "k6 run",
+    "test:worker": "node tests/load/worker-throughput.js",
+    "test:quick": "node tests/load/quick-test.js"
   },
   "main": "dist/index.js",
   "repository": {
@@ -20,12 +24,25 @@
   },
   "homepage": "https://github.com/Niiaks/Conveyor#readme",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.978.0",
+    "@aws-sdk/s3-request-presigner": "^3.978.0",
+    "amqplib": "^0.10.9",
+    "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "mongoose": "^9.1.5"
+    "file-type": "^21.3.0",
+    "mongoose": "^9.1.5",
+    "multer": "^2.0.2",
+    "multer-s3": "^3.0.1",
+    "sharp": "^0.34.5",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "@types/multer-s3": "^3.0.3",
     "@types/node": "^25.1.0",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
