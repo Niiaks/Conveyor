@@ -20,3 +20,5 @@ const FileSchema = new mongoose.Schema({
   error: String,
   createdAt: { type: Date, default: Date.now },
 });
+
+export const File = mongoose.model("File", FileSchema);
